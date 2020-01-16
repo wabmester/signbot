@@ -7,7 +7,7 @@ from slackclient import SlackClient
 import smbus
 
 botname = "signbot"
-api_token = "xoxb-140504451268-672086241472-IsWiHYvPD5uocPOpJzTVFAT6"
+api_token = "secret token goes here"
 
 DEVICE_BUS = 1
 DEVICE_ADDR = 0x15
