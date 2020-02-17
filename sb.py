@@ -5,9 +5,10 @@ import json
 from slackclient import SlackClient
 #from subprocess import call
 import smbus
+import secret
 
 botname = "signbot"
-api_token = "secret token goes here"
+api_token = secret.SECRET
 
 DEVICE_BUS = 1
 DEVICE_ADDR = 0x15
@@ -95,7 +96,7 @@ for user in user_list.get('members'):
 
 
 # Start connection
-if slack_client.rtm_connect():
+if slack_client.rtm_connect(auto_reconnect = True):
     print "Connected!"
 
     while True:
